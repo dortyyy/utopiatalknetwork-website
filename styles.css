@@ -1,0 +1,103 @@
+html {
+    font-size: 18px;
+    background-color: black;
+}
+
+/* GLOBAL */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    max-width: 50rem;
+    margin: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+}
+
+/* HEADER */
+header h1 {
+    font-size: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+header p {
+    margin-top: 0;
+}
+
+/* NAV BAR */
+nav {
+    background: #111;
+    margin: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: color 0.4s ease, background 0.4s ease;
+}
+
+nav ul li a:hover {
+    background: #333;
+    color: #ccc;
+}
+
+/* MAIN */
+
+/* SECTION */
+section {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 0 7%;
+    margin: 1rem 0;
+}
+
+section a {
+    color: lightblue;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+section p {
+    font-family: Georgia, serif;
+    text-align: left;
+}
+
+/* PHONE SUPPORT */
+
+@media (max-width: 1000px) {
+    body {
+        margin: 0 3vw;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+}
