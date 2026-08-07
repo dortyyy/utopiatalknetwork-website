@@ -1,116 +1,145 @@
 html {
     font-size: 1.1rem;
-    background-color: black;
 }
 
-/* GLOBAL */
+/* Layouts */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    max-width: 55rem;
+    margin: 0 auto;
+}
+
+header {
+    padding-top: 1.5rem;
+}
+
+.page-wrap {
+    display: flex;
+}
+
+main {
+    flex: 3;
+    padding: 1.5rem;
+}
+
+main section {
+    margin-bottom: 1rem;
+    border: 3px solid #333;
+}
+
+main section h2 {
+    border-bottom: 3px solid #333;
+}
+
+aside {
+    flex: 1;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+}
+
+aside section {
+    margin-bottom: 1rem;
+    padding: .75rem;
+    border: 3px solid #333;
+}
+
+@media (max-width: 60rem) {
+    .page-wrap {
+        flex-direction: column;
+    }
+
+    aside {
+        padding: 1.5rem;
+    }
+}
+
+/* Text */
+body {
     color: white;
-    max-width: 45rem;
+}
+
+header {
+    text-align: center;
+}
+
+main section h2 {
+    padding: .75rem;
     margin: auto;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    transition: .2s ease-in-out;
+.section-body {
+    padding: .75rem;
 }
 
-/* HEADER */
-header h1 {
-    font-size: 4rem;
-    margin-top: 1rem;
-    margin-bottom: 0;
+.section-body p {
+    margin: .5rem auto;
 }
 
-header p {
-    margin-top: 0;
-}
-
-/* NAV BAR */
-nav {
-    background: #111;
-    margin: 0;
-    padding: .75rem 0;
-    border-bottom: 1px solid #333;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    transition: color 0.4s ease, background 0.4s ease;
-}
-
-nav ul li a:hover {
-    background: #333;
-    color: #ccc;
-}
-
-/* MAIN */
-
-/* SECTION */
-section {
-    background: #111;
-    border: 1px solid #333;
-    margin: 1rem 0;
-}
-
-section h2 {
-    text-align: left;
-    font-size: 1rem;
-    border-bottom: 1px solid #333;
-    background: #112;
-    margin: 0;
-    padding: 0.75rem;
-}
-
-section p {
-   text-align: left;
-}
-
-section .section-body {
-   padding: 0 0.75rem;
-   font-family: Georgia, serif;
-}
-
-section img {
-    max-width: 75%;
+aside h2 {
+    margin: .5rem auto;
 }
 
 section a {
     color: lightblue;
+    text-decoration: none;
+
 }
 
 section a:hover {
     text-decoration: underline;
 }
 
-/* PHONE SUPPORT */
+section h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-@media (width <= 60rem) {
-    body {
-        margin: 0 3vw;
-    }
+/* Elements */
+body {
+    background-color: black;
+}
 
-    header h1 {
-        font-size: 3rem;
-    }
+header img {
+    max-width: 100%;
+}
+
+section {
+    border-radius: 7px;
+}
+
+main section img {
+    max-width: 100%;
+}
+
+.section-heading {
+    background-color: #112;
+}
+
+.section-body {
+    background-color: #111;
+}
+
+aside li img {
+    max-height: 0.75rem;
+    margin-left: 0.25rem;
+}
+
+/* UTN Box */
+.utn h2 {
+    text-align: left;
+}
+
+.utn {
+    text-align: center;
+}
+
+/* Greg's Box */
+.greg div.section-body {
+    background-image: url(resources/raphael-rychetsky-li9JfUHQfOY-unsplash.jpg);
+    background-size: 150%;
+    min-height: 20rem;
+
+}
+
+/* 209.2 Box */
+
+.forge {
+
 }
