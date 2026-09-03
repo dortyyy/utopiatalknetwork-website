@@ -1,145 +1,1145 @@
+/* =========================================================
+   UTOPIA TALK NETWORK
+   Early 2000s Web Portal Style
+   ========================================================= */
+
+:root {
+    --black: #000000;
+    --near-black: #080808;
+    --panel: #111111;
+    --panel-light: #181818;
+    --blue-black: #11111f;
+    --blue: #24243a;
+    --blue-light: #454566;
+
+    --white: #eeeeee;
+    --gray: #aaaaaa;
+    --dark-gray: #555555;
+
+    --red: #d00000;
+    --bright-red: #ff1b1b;
+    --yellow: #ffff00;
+    --cyan: #00ffff;
+    --green: #00ff44;
+    --magenta: #ff00ff;
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
 html {
-    font-size: 1.1rem;
+    background: #000;
+    font-size: 14px;
 }
 
-/* Layouts */
 body {
-    max-width: 55rem;
     margin: 0 auto;
-}
+    padding: 0 12px 30px;
 
-header {
-    padding-top: 1.5rem;
-}
+    max-width: 1050px;
 
-.page-wrap {
-    display: flex;
-}
+    background: #000;
+    color: var(--white);
 
-main {
-    flex: 3;
-    padding: 1.5rem;
-}
-
-main section {
-    margin-bottom: 1rem;
-    border: 3px solid #333;
-}
-
-main section h2 {
-    border-bottom: 3px solid #333;
-}
-
-aside {
-    flex: 1;
-    padding: 1.5rem 1.5rem 1.5rem 0;
-}
-
-aside section {
-    margin-bottom: 1rem;
-    padding: .75rem;
-    border: 3px solid #333;
-}
-
-@media (max-width: 60rem) {
-    .page-wrap {
-        flex-direction: column;
-    }
-
-    aside {
-        padding: 1.5rem;
-    }
-}
-
-/* Text */
-body {
-    color: white;
-}
-
-header {
-    text-align: center;
-}
-
-main section h2 {
-    padding: .75rem;
-    margin: auto;
-}
-
-.section-body {
-    padding: .75rem;
-}
-
-.section-body p {
-    margin: .5rem auto;
-}
-
-aside h2 {
-    margin: .5rem auto;
-}
-
-section a {
-    color: lightblue;
-    text-decoration: none;
-
-}
-
-section a:hover {
-    text-decoration: underline;
-}
-
-section h2 {
     font-family: Arial, Helvetica, sans-serif;
-}
+    font-size: 13px;
+    line-height: 1.25;
 
-/* Elements */
-body {
-    background-color: black;
-}
-
-header img {
-    max-width: 100%;
-}
-
-section {
-    border-radius: 7px;
-}
-
-main section img {
-    max-width: 100%;
-}
-
-.section-heading {
-    background-color: #112;
-}
-
-.section-body {
-    background-color: #111;
-}
-
-aside li img {
-    max-height: 0.75rem;
-    margin-left: 0.25rem;
-}
-
-/* UTN Box */
-.utn h2 {
     text-align: left;
 }
 
-.utn {
+a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--yellow);
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    margin: 7px 0;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    padding-top: 10px;
+    margin-bottom: 8px;
+}
+
+.header-top {
+    min-height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.utn-logo {
+    display: block;
+    max-width: 420px;
+    max-height: 150px;
+}
+
+.header-side {
+    position: absolute;
+
+    top: 52px;
+
+    width: 160px;
+
+    color: #888;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11px;
+    line-height: 1.1;
+}
+
+.header-side span {
+    color: #555;
+    font-size: 9px;
+}
+
+.header-side.left {
+    left: 5px;
+    text-align: right;
+}
+
+.header-side.right {
+    right: 5px;
+    text-align: left;
+}
+
+
+/* =========================================================
+   TOP LINKS
+   ========================================================= */
+
+.quick-links {
+    background: #11111c;
+
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+
+    padding: 5px 8px;
+
+    text-align: center;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.quick-links a {
+    margin: 0 7px;
+    text-decoration: none;
+}
+
+.quick-links a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.quick-links span {
+    color: var(--red);
+}
+
+
+/* =========================================================
+   NEWS TICKER
+   ========================================================= */
+
+.news-ticker {
+    height: 25px;
+
+    margin-top: 3px;
+
+    overflow: hidden;
+
+    background: #171717;
+
+    border: 1px solid #333;
+
+    color: #ddd;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+
+    padding: 5px 8px;
+
+    white-space: nowrap;
+}
+
+.news-ticker strong {
+    color: var(--yellow);
+}
+
+.news-ticker span {
+    margin-left: 15px;
+}
+
+.news-ticker .ticker-new {
+    color: var(--red);
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   PAGE LAYOUT
+   ========================================================= */
+
+.page-wrap {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 245px;
+
+    gap: 10px;
+
+    align-items: start;
+}
+
+main {
+    min-width: 0;
+}
+
+aside {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+section {
+    margin: 0 0 10px;
+
+    padding: 0;
+
+    background: var(--panel);
+
+    border: 1px solid #444;
+
+    border-radius: 2px;
+}
+
+.section-heading {
+    position: relative;
+
+    min-height: 36px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #202033 0%,
+            #161625 48%,
+            #11111b 100%
+        );
+
+    border-bottom: 1px solid #555;
+
+    padding: 7px 9px 6px;
+}
+
+.section-heading h2 {
+    display: inline;
+
+    margin: 0;
+
+    padding: 0;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+
+    letter-spacing: 0;
+
+    text-transform: none;
+}
+
+.section-label {
+    float: right;
+
+    margin-top: 2px;
+
+    color: #777;
+
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-body {
+    padding: 9px;
+}
+
+
+/* =========================================================
+   WELCOME
+   ========================================================= */
+
+.welcome-layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 145px;
+
+    gap: 10px;
+}
+
+.welcome-message {
+    text-align: center;
+
+    min-height: 125px;
+
+    border-right: 1px dotted #444;
+
+    padding-right: 10px;
+}
+
+.warning {
+    margin-top: 2px;
+
+    color: var(--yellow);
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+
     text-align: center;
 }
 
-/* Greg's Box */
-.greg div.section-body {
-    background-image: url(resources/raphael-rychetsky-li9JfUHQfOY-unsplash.jpg);
-    background-size: 150%;
-    min-height: 20rem;
+.construction-gif {
+    width: auto;
+    max-width: 100%;
+    height: auto;
 
+    display: inline-block;
+
+    margin: 3px auto;
 }
 
-/* 209.2 Box */
+.small-center {
+    text-align: center;
 
-.forge {
+    color: #bbb;
 
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+}
+
+.welcome-junk {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+/* =========================================================
+   MINI BOXES
+   ========================================================= */
+
+.mini-box {
+    background: #090909;
+
+    border: 1px solid #454545;
+
+    padding: 0 6px 6px;
+
+    font-size: 10px;
+}
+
+.mini-heading {
+    margin: 0 -6px 5px;
+
+    padding: 4px 5px;
+
+    background: #25253a;
+
+    border-bottom: 1px solid #555;
+
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.mini-box p {
+    margin: 5px 0;
+
+    color: #aaa;
+
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+/* =========================================================
+   OLD WEB BUTTONS
+   ========================================================= */
+
+.button-row {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    justify-content: center;
+
+    margin-top: 9px;
+}
+
+.web-button {
+    width: 88px;
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #333 0%,
+            #111 45%,
+            #050505 100%
+        );
+
+    border: 2px outset #777;
+
+    color: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px;
+    font-weight: bold;
+
+    line-height: 9px;
+
+    text-align: center;
+}
+
+.web-button:hover {
+    border-style: inset;
+    color: var(--yellow);
+}
+
+
+/* =========================================================
+   SITE NEWS
+   ========================================================= */
+
+.news-columns {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+.news-story {
+    min-height: 115px;
+
+    background: #090909;
+
+    border: 1px solid #333;
+
+    padding: 7px;
+}
+
+.news-story h3 {
+    margin: 0 0 5px;
+
+    color: #fff;
+
+    font-size: 13px;
+}
+
+.news-story p {
+    color: #aaa;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+}
+
+.news-story a {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   GREG
+   ========================================================= */
+
+.feature-header {
+    padding: 4px 6px;
+
+    margin-bottom: 8px;
+
+    background: #080808;
+
+    border-bottom: 1px dotted #555;
+
+    font-size: 11px;
+}
+
+.new-badge {
+    margin-right: 7px;
+
+    padding: 1px 4px;
+
+    background: var(--red);
+
+    color: #fff;
+
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.feature-content {
+    display: grid;
+
+    grid-template-columns: 240px minmax(0, 1fr);
+
+    gap: 10px;
+}
+
+.placeholder-image {
+    width: 100%;
+    min-height: 135px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #151515 0px,
+            #151515 8px,
+            #0d0d0d 8px,
+            #0d0d0d 16px
+        );
+
+    border: 1px solid #555;
+
+    color: #666;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+
+    text-align: center;
+}
+
+.feature-text h3 {
+    margin: 0 0 5px;
+
+    font-size: 15px;
+}
+
+.feature-text p {
+    color: #bbb;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+}
+
+.tiny-text {
+    color: #666 !important;
+
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 9px !important;
+}
+
+.big-link {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    color: var(--yellow);
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   ADS
+   ========================================================= */
+
+.ad-slot {
+    margin-top: 10px;
+
+    min-height: 65px;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #111 0px,
+            #111 10px,
+            #151515 10px,
+            #151515 20px
+        );
+
+    border: 1px dashed #555;
+
+    text-align: center;
+}
+
+.ad-slot span {
+    color: #777;
+
+    font-size: 8px;
+}
+
+.ad-slot strong {
+    color: var(--yellow);
+
+    font-size: 13px;
+}
+
+.ad-slot small {
+    color: #777;
+
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+/* =========================================================
+   FORGE
+   ========================================================= */
+
+.forge-intro {
+    margin-top: 0;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+}
+
+.forge-layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 155px;
+
+    gap: 10px;
+
+    align-items: start;
+}
+
+.forge-logo img {
+    display: block;
+
+    width: 50%;
+    height: auto;
+}
+
+.forge-side {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.forge-buttons {
+    justify-content: flex-start;
+}
+
+.forge-button {
+    border-color: #8b8b8b;
+}
+
+
+/* =========================================================
+   RANDOM JUNK
+   ========================================================= */
+
+.junk-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+.junk-box {
+    min-height: 130px;
+
+    background: #080808;
+
+    border: 1px solid #444;
+
+    padding: 7px;
+}
+
+.junk-box h3 {
+    margin: -7px -7px 7px;
+
+    padding: 5px;
+
+    background: #222238;
+
+    border-bottom: 1px solid #555;
+
+    color: #fff;
+
+    font-size: 12px;
+}
+
+.junk-box p {
+    color: #aaa;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11px;
+}
+
+.junk-box a {
+    font-size: 10px;
+}
+
+.junk-box button {
+    margin-top: 7px;
+
+    background: #222;
+
+    border: 2px outset #777;
+
+    color: white;
+
+    font-size: 9px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar-section {
+    margin-bottom: 10px;
+}
+
+.sidebar-section .section-body {
+    padding: 7px;
+}
+
+.sidebar-section h2 {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    margin: 0;
+
+    padding: 0;
+
+    background: #090909;
+
+    border: 0;
+}
+
+nav ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+
+    border-bottom: 1px dotted #444;
+}
+
+nav li:last-child {
+    border-bottom: none;
+}
+
+nav a {
+    display: block;
+
+    padding: 6px 5px;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #25253a;
+
+    color: var(--yellow);
+}
+
+nav img {
+    width: 12px;
+    height: 12px;
+
+    margin-left: 4px;
+
+    vertical-align: middle;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   SIDEBAR NEWS
+   ========================================================= */
+
+.sidebar-news {
+    padding: 7px;
+
+    background: #090909;
+
+    border: 1px solid #333;
+
+    color: #aaa;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11px;
+}
+
+.sidebar-news strong {
+    color: var(--red);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.stats {
+    padding: 7px;
+
+    background: #090909;
+
+    border: 1px solid #333;
+
+    color: #777;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+}
+
+.stats strong {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   SIDEBAR AD
+   ========================================================= */
+
+.sidebar-ad {
+    min-height: 115px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px;
+
+    background:
+        radial-gradient(
+            circle,
+            #333 0%,
+            #111 55%,
+            #050505 100%
+        );
+
+    border: 1px solid #555;
+
+    text-align: center;
+}
+
+.sidebar-ad span {
+    color: #777;
+
+    font-size: 8px;
+}
+
+.sidebar-ad strong {
+    margin: 7px 0;
+
+    color: var(--yellow);
+
+    font-size: 14px;
+}
+
+.sidebar-ad small {
+    color: #777;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   SIDEBAR BUTTONS
+   ========================================================= */
+
+.sidebar-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.small-web-button {
+    width: 88px;
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #343434,
+            #111
+        );
+
+    border: 2px outset #777;
+
+    color: white;
+
+    font-size: 8px;
+    font-weight: bold;
+
+    line-height: 9px;
+
+    text-align: center;
+}
+
+.small-web-button:hover {
+    border-style: inset;
+
+    color: var(--yellow);
+}
+
+
+/* =========================================================
+   FOLLOW
+   ========================================================= */
+
+.follow-list {
+    margin: 0;
+
+    padding: 7px 20px;
+
+    background: #090909;
+
+    border: 1px solid #333;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SIDEBAR PLACEHOLDER
+   ========================================================= */
+
+.sidebar-placeholder {
+    min-height: 100px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #121212,
+            #121212 6px,
+            #0b0b0b 6px,
+            #0b0b0b 12px
+        );
+
+    border: 1px dashed #555;
+
+    color: #777;
+
+    font-family: "Times New Roman", Times, serif;
+
+    text-align: center;
+}
+
+.sidebar-placeholder strong {
+    color: var(--yellow);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    margin-top: 12px;
+
+    padding: 10px 5px 20px;
+
+    border-top: 1px solid #444;
+
+    color: #666;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 10px;
+
+    text-align: center;
+}
+
+.footer-buttons {
+    margin-bottom: 8px;
+}
+
+.footer-buttons span {
+    display: inline-block;
+
+    margin: 2px 4px;
+
+    padding: 3px 6px;
+
+    background: #111;
+
+    border: 1px solid #444;
+
+    color: #777;
+
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.footer-links {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #aaa;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    body {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .page-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .sidebar-section {
+        margin-bottom: 0;
+    }
+
+    .header-side {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header-top {
+        min-height: 100px;
+    }
+
+    .utn-logo {
+        max-width: 280px;
+    }
+
+    .quick-links {
+        line-height: 20px;
+    }
+
+    .news-ticker {
+        display: none;
+    }
+
+    .welcome-layout,
+    .feature-content,
+    .forge-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-message {
+        border-right: none;
+        border-bottom: 1px dotted #444;
+
+        padding-right: 0;
+        padding-bottom: 8px;
+    }
+
+    .news-columns,
+    .junk-grid {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        grid-template-columns: 1fr;
+    }
 }
