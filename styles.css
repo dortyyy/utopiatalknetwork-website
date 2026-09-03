@@ -9,7 +9,7 @@
     --panel: #111111;
     --panel-light: #181818;
     --blue-black: #11111f;
-    --blue: #24243a;
+    --blue: #243a25;
     --blue-light: #454566;
 
     --white: #eeeeee;
@@ -748,6 +748,7 @@ section {
 
 .sidebar-section h2 {
     font-size: 15px;
+    padding-left: 7px;
 }
 
 
