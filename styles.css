@@ -218,7 +218,7 @@ aside ul li a {
 /* News Ticker */
 .news-ticker-wrap {
     margin: 0 1.5rem;
-    padding: .75rem;
+    padding: .75rem 0 .75rem 0;
     border: 1px solid #444;
     background-color: #111;
 }
