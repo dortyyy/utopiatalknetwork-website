@@ -63,7 +63,7 @@ section a:hover {
 }
 
 section h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
 }
 
 /* Elements */
@@ -120,14 +120,14 @@ main section img {
 }
 
 .greg-promo-text h3 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
     font-size: .9rem;
     margin: auto;
 }
 
 .greg-promo-text a {
     font-size: .8rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
     font-weight: bold;
     color: yellow;
     text-transform: uppercase;
@@ -155,14 +155,14 @@ main section img {
 }
 
 .forge-promo-text h3 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
     font-size: .9rem;
     margin: auto;
 }
 
 .forge-promo-text a {
     font-size: .8rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
     font-weight: bold;
     color: yellow;
     text-transform: uppercase;
@@ -252,6 +252,8 @@ aside ul li a {
 
 }
 
+/* Smaller screens */
+
 @media (max-width: 60rem) {
     .page-wrap {
         flex-direction: column;
@@ -259,6 +261,20 @@ aside ul li a {
 
     .greg-promo {
         grid-template-columns: 1fr;
+    }
+
+    .greg-promo-image img {
+        width: 40vw;
+        margin: auto;
+    }
+
+    .forge-promo {
+        grid-template-columns: 1fr;
+    }
+
+    .forge-promo-image img {
+        width: 40vw;
+        margin: auto;
     }
 
     aside {
